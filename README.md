@@ -161,3 +161,5 @@ citizen of their infrastructure if you extend this project.
 ## 📄 License
 
 Licensed under the [MIT License](LICENSE).
+
+# Animiq
