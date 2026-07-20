@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Quicksand } from "next/font/google";
 import { Providers } from "./providers";
+import { SiteBackground } from "@/components/layout/site-background";
 import { InlineScript } from "@/components/ui/inline-script";
 import "./globals.css";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <InlineScript html={THEME_INIT_SCRIPT} />
       </head>
       <body className="flex min-h-full flex-col">
+        <SiteBackground />
         <Providers>{children}</Providers>
       </body>
     </html>
