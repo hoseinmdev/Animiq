@@ -15,6 +15,8 @@ tuned for a masonry feed that never jank-scrolls.
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ec4899?style=flat-square)](LICENSE)
 
+**[🔗 Live Demo](https://animiq.vercel.app/)**
+
 </div>
 
 ---
