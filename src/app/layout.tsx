@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Fredoka, Quicksand } from "next/font/google";
 import { Providers } from "./providers";
+import { InlineScript } from "@/components/ui/inline-script";
 import "./globals.css";
+
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
 
 const heading = Fredoka({
   variable: "--font-heading",
@@ -26,7 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${heading.variable} ${body.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      data-theme="dark"
+      className={`${heading.variable} ${body.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <head>
+        <InlineScript html={THEME_INIT_SCRIPT} />
+      </head>
       <body className="flex min-h-full flex-col">
         <Providers>{children}</Providers>
       </body>
